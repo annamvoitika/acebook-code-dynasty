@@ -1,10 +1,16 @@
 <h1>Timeline</h1>
 <ul class="posts">
+  <!-- <script id="t" type="text/x-handlebars"> -->
+
   {{#each posts}}
   <div>
-  <li>{{this.message}}</li>
+
+    <li>{{this.message}}</li>
+
+
+
   <p id = "date"> {{this.created_at}} </p>
-  <!-- <p>Edited: {{this.updated_at}}</p> -->
+  <!-- <p> Edited: {{this.updated_at}}</p> -->
 </div>
 
   <form action="/posts/delete/{{this._id}}" method="post">
@@ -20,8 +26,8 @@
   </form>
   <p> Likes: {{this.likes}} </p>
 
-
   {{/each}}
+<!-- </script> -->
 </ul>
 
 <a class="new-post-link" href="/posts/new">New post</a>

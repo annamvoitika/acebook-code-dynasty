@@ -1,5 +1,5 @@
 const Post = require('../models/post');
-
+const Handlebars = require("handlebars");
 
 const PostsController = {
   Index: function(req, res) {
