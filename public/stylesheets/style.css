@@ -17,8 +17,8 @@ a {
      line-height: 18px;
      overflow: hidden;
      padding: 12px;
-     padding-bottom: 40px;
-     padding-top: 40px;
+     padding-bottom: 30px;
+     padding-top: 30px;
      margin-top: 20px;
 }
 
@@ -35,4 +35,13 @@ ul {
 
 a {
   color: #f76b8a;
+}
+
+.all-buttons input {
+  color: green;
+  float:left;
+  padding: 6px;
+  margin-top: 10px;
+  margin-left: 4px;
+
 }
