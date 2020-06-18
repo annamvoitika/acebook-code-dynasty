@@ -31,7 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // photo
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
+// app.set('view engine', 'hbs');
 
 const mongoURI = 'mongodb+srv://acebook-code-dynasty:code-dynasty@acebook-code-dynasty-wqegs.mongodb.net/acebook-code-dynasty?retryWrites=true&w=majority';
 
@@ -64,12 +65,39 @@ const storage = new GridFsStorage({
  });
  const upload = multer({ storage });
 
-app.get('/posts/photo', (req, res) => {
-  res.render('posts/photo');
+app.get('/photos', (req, res) => {
+  gfs.files.find().toArray((err, files) => {
+    // Check if files
+    if (!files || files.length === 0) {
+      res.render('/photos', { files: false });
+    } else {
+      files.map(file => {
+        if (
+          file.contentType === 'image/jpeg' ||
+          file.contentType === 'image/png'
+        ) {
+          file.isImage = true;
+        } else {
+          file.isImage = false;
+        }
+      });
+      res.render('posts/photo', { files: files });
+    }
+  });
 });
 
 app.post('/upload', upload.single('file'),(req, res) => {
-  res.json({file: req.file});
+  // res.json({file: req.file});
+  res.redirect('/photos');
+});
+
+app.delete('/files/:id', (req, res) => {
+  gfs.remove({_id: req.params.id, root: 'uploads'}, (err, gridStore) => {
+    if(err) {
+      return res.status(404).json({ err: err });
+    }
+    res.redirect('/photos');
+  })
 });
 
 // route setup
