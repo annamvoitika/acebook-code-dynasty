@@ -23,7 +23,8 @@ router.use(passport.initialize());
 router.use(passport.session());
 router.use(methodOverride('_method'));
 
-router.get('/', HomeController.CheckAuthenticated, HomeController.Index);
+router.get('/', HomeController.Index);
+// router.get('/', HomeController.CheckAuthenticated, HomeController.Index);
 router.get('/sign_up', HomeController.CheckNotAuthenticated,
     HomeController.UserSignUp);
 router.post('/sign_up', HomeController.CheckNotAuthenticated,
