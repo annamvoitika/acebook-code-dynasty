@@ -1,22 +1,39 @@
-<h1>Sign Up</h1>
-<form id="sign-up-form" action="/sign_up" method="POST">
-  <div>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name"
-    required>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="stylesheets/authenticationPages.css">
+<div class="container signup">
+  <div class="row">
+    <div class="col-md-4 signup-left">
+      <img src="images/avacodo_logo__1_.png" alt="" class="logo_image"/>
+      <h3>Welcome Avocodos</h3>
+      <p>You are seconds away from connecting with other coders!</p>
+      <p>Already signed up...</p>
+      <form method="get" action="/sign_in">
+        <button type="submit">Sign In</button>
+      </form>
   </div>
-
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email"
-    required>
+  <div class="col-md-6 signup-right">
+    <h3 class="signup-heading">Sign Up</h3>
+    <div class="row signup-form">
+      <div class="col-md-12">
+        <form id="sign-up-form" action="/sign_up" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name"
+            required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email"
+            required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password"
+            required>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
   </div>
-
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password"
-    required>
-  </div>
-  <button type="submit">Sign Up</button>
-</form>
-<a href="/sign_in">Sign In</a>
+</div>
