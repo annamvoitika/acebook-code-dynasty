@@ -1,7 +1,29 @@
-<h1 class="title">{{title}}</h1>
-<p>Welcome to {{title}} y'all</p>
-<a href="/posts">Posts</a>
+<head>
+<link rel='stylesheet' href='/stylesheets/home_page.css' />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<!-- Navigation bar -->
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/posts">Posts</a>
+</div>
+
+<!-- Main -->
+<body>
+<div class="header">
+  <h1>Welcome to {{title}}!</h1>
+  <h2>The Social Networking site for Devs</h2>
+  <p>How are you feeling today?</p>
+</div>
 
 <form action="/sign_out?_method=DELETE" method="POST">
   <button type="submit">Sign Out</button>
 </form>
+</div>
+
+<!-- Footer -->
+<p>By Avocodo</p>
+<img src="images/avocodo_logo_black.png" height="35" width="70">
+
+</body>
