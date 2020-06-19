@@ -53,8 +53,6 @@
   },
   "nodemonConfig": {
     "ext": "js,hbs"
-  ,
-  "scripts": {
-    "start": "node app.js"
-}
+  }
+  
 }
