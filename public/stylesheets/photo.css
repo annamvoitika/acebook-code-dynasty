@@ -1,0 +1,62 @@
+body {
+  background-color: #fff4c9;
+  font: 16px "Lora", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: #1f1f1f;
+}
+
+h1 {
+  font: 40px "Lato", Helvetica, sans-serif;
+  color: #1b262c;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+img {
+  vertical-align: middle;
+  width: 30%;
+  height: 35%;
+  padding-bottom: 3%;
+}
+
+.banner1 {
+  height: 45%;
+  width: 100%;
+  background-color: #81ae64 !important;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+.banner2 {
+  height: 45%;
+  width: 100%;
+  background-color: #c7e78b !important;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.delete-button {
+  border-radius: 8px;
+  color: #fff4c9;
+  background-color: #81ae64;
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.custom-file-input {
+  color: #fff4c9;
+  background-color: #c7e78b;
+  border: 2px solid c7e78b;
+  border-radius: 4px;
+}
+
+.submit-button {
+  border-radius: 8px;
+  color: #fff4c9;
+  background-color: #81ae64;
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.logo{
+  background-color: #81ae64;
+}

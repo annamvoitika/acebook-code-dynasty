@@ -3,23 +3,38 @@
 <head>
     <title>Upload Images to Server</title>
     <meta charset="utf-8">
-    <style>
-      img {
-        width: 10%;
-        height: 15%;
-      }
-    </style>
+    <link rel='stylesheet' href='/stylesheets/photo.css' />
 </head>
 <body>
   <center>
-    <h2 class> Mongo File Uploads </h2>
+    <div class="logo">
+      <br>
+      <img src="images/logo.png">
+    </div>
+    <div class="banner2">
+      <br>
+    </div>
+    <h1 class> Your beautiful Photos </h1>
+    <div class="banner2">
+      <br>
+    </div>
+    <div class="banner1">
+      <br>
+    </div>
+    <br>
+    <h2> Add a photo below </h2>
     <form action="/upload" method="POST" enctype="multipart/form-data">
       <input type="file" name="file" id="file" class="custom-file-input">
       <br>
-      <label for="file" class="custom-file-label"> Choose File </label>
-      <input type="submit" value="Submit">
+      <label for="file" class="custom-file-label"></label>
+      <br>
+      <input type="submit" value="Submit" class="submit-button">
     </form>
-    <hr>
+    <br>
+    <div class="banner2">
+      <br>
+    </div>
+    <br>
     <% if(files){ %>
       <% files.forEach(function(file) { %>
       <div class="card card-body mb-3">
@@ -28,14 +43,22 @@
             <% } else { %>
               <%= file.filename %>
               <% } %>
+              <br>
               <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
-                <button class="btn btn-danger btn-block mt-4">Delete</button>
+                <button class="delete-button">Delete</button>
               </form>
+              <br>
         </div>
           <% }) %>
           <% } else { %>
           <p>No files to show</p>
           <% } %>
+    <div class="banner2">
+      <br>
+    </div>
+    <div class="banner1">
+      <br>
+    </div>
   </center>
 </body>
 </html>
