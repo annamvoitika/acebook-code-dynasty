@@ -1,19 +1,31 @@
-body{
+html {
+  text-align: center;
+}
+
+body {
   background-color: #fff4c9;
+  font: 16px "Lora", Helvetica, Arial, sans-serif;
   text-align: center;
+  color: #1f1f1f;
 }
 
-.header {
-  padding: 60px;
-  text-align: center;
-  font: 40px, "Lato", Helvetica, sans-serif;
-  color: #81ae64;
+h1 {
+  font: 40px "Lato", Helvetica, sans-serif;
+  color: #1b262c;
+  padding-top:40px;
+  padding-bottom: 40px;
 }
 
+h2 {
+  font: 16px "Lora", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #1f1f1f;
+}
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #81ae64;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 /* Style the links inside the navigation bar */
